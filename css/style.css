@@ -4,7 +4,44 @@ html, body {
     margin: 0;
     padding: 0;
   }
+  #searchContainer {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above the map */
+}
+
+#searchBar {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 200px;
+}
+
+#searchBtn {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+    font-size: 14px;
+}
+
+#searchBtn:hover {
+    background-color: #0056b3;
+}
   #map {
     height: 100%;
     width: 100%;
   }
+

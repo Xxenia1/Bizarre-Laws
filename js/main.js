@@ -9,7 +9,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
   }).addTo(map);
 
 //load continent boundaries from geojson
-fetch('Data/continents.json') // Update with the correct file path
+fetch('Data/continents_geojson.json') // Update with the correct file path
     .then(response => response.json())
     .then(data => {
         L.geoJSON(data, {
@@ -35,5 +35,27 @@ fetch('Data/continents.json') // Update with the correct file path
 
 
 
-//create a search bar
+//create a container for search widget and the search button
+var searchContainer = document.createElement("map");
+    searchContainer.setAttribute("id", "searchContainer");
 
+var searchWidget = document.createElement("input");
+    searchWidget.setAttribute("type", "text");
+    searchWidget.setAttribute("id", "searchBar");
+    searchWidget.setAttribute("placeholder", "Search for a country...");
+
+
+var searchBtn = document.createElement("button");
+    searchBtn.innerHTML = "Search";
+    searchBtn.setAttribute("id", "searchBtn");
+
+    //append elements inside the container
+    searchContainer.appendChild(searchWidget);
+    searchContainer.appendChild(searchBtn);
+
+// Append the container to the document body
+document.body.appendChild(searchContainer);
+
+console.log(document.getElementById("searchContainer")); // Debugging check
+
+//add search function
