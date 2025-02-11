@@ -33,27 +33,7 @@ fetch('Data/continents.json') // Update with the correct file path
     })
     .catch(error => console.error("Error loading GeoJSON:", error));
 
-// Define continent boundaries 
-/*var continents = {
-    "Africa": {bounds: [[-35, -20], [37, 55]], center: [0, 20]},
-    "Asia": {bounds: [[-10, 60], [55, 150]], center: [30, 100]},
-    "Europe": {bounds: [[35, -25], [70, 45]], center: [55, 15]},
-    "North America": {bounds: [[10, -170], [75, -50]], center: [40, -100]},
-    "South America": {bounds: [[-55, -80], [15, -35]], center: [-15, -60]},
-    "Oceania": {bounds: [[-50, 110], [0, 180]], center: [-25, 135]}
-};
 
-// Highlight continents on hover
-for (let continent in continents) {
-    let layer = L.rectangle(continents[continent].bounds, {color: "transparent", weight: 1, fillOpacity: 0.2}).addTo(map);
-    
-    layer.on('mouseover', function() {
-        this.setStyle({fillOpacity: 0.5, color: "red"});
-    });
-    layer.on('mouseout', function() {
-        this.setStyle({fillOpacity: 0.2, color: "transparent"});
-    });
-    layer.on('click', function() {
-        map.flyTo(continents[continent].center, 4); // Zoom to continent
-    });
-}*/
+
+//create a search bar
+
