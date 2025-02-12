@@ -56,6 +56,6 @@ var searchBtn = document.createElement("button");
 // Append the container to the document body
 document.body.appendChild(searchContainer);
 
-console.log(document.getElementById("searchContainer")); // Debugging check
+//console.log(document.getElementById("searchContainer")); // Debugging check
 
 //add search function
